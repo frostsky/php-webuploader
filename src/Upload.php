@@ -49,7 +49,7 @@ class Upload
 // 5 minutes execution time
         @set_time_limit(5 * 60);
 
-        $targetDir = 'upload_temp';   //切片保留路径(可自行修改)
+        $targetDir = 'upload_temp';   //切片保留路径(可自行修改["名称+_temp"])
         $uploadDir = 'upload/'.date('Ymd');//最终上传路径(可自行修改)
 
         $cleanupTargetDir = true; // Remove old files
@@ -83,7 +83,7 @@ class Upload
         // $uploadPath = $uploadDir . DIRECTORY_SEPARATOR . $fileNames;
         $uploadPath = str_replace('\\', '/', $uploadDir.DIRECTORY_SEPARATOR.$fileNames);
 
-        $domain = 'http://codes.com/';//配置域名可自行修改
+        $domain = 'http://codes.com';//配置域名可自行修改
         $urls   = $domain.'/'.$uploadPath;
 
 // Chunking might be enabled
