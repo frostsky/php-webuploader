@@ -1,2 +1,2 @@
 # php-webuploader
-PHP的切片上传
+PHP实现大文件的切片上传
